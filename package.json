@@ -11,14 +11,18 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.format",
+        "onCommand:extension.resetFormat"
     ],
     "main": "./extension",
     "contributes": {
-        "commands": [
+        "commands": [{
+                "command": "extension.format",
+                "title": "img format"
+            },
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "extension.resetFormat",
+                "title": "img reset format"
             }
         ]
     },
