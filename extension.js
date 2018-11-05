@@ -4,15 +4,14 @@ function activate(context) {
     let format = vscode.commands.registerCommand('extension.format', function() {
         let originText = vscode.window.activeTextEditor.document.getText()
 
-        let imgRegex = /\!\[[^\[\]]*\]\([^\(\)]*\)(?!<\/a>)/
+        let imgRegex = /\!\[[^\[\]]*\]\([^\(\)]*\)(?!<\/a>)/g
         let imgCode = imgRegex.exec(originText)
 
         let title = imgCode[0].substring(imgCode[0].indexOf('[') + 1, imgCode[0].indexOf(']'))
         let url = imgCode[0].substring(imgCode[0].indexOf('(') + 1, imgCode[0].indexOf(')'))
         let newImgCode = `<a data-fancybox title="${title}" href="${url}">${imgCode}</a>`
 
-        let newText = originText.replace(imgCode, newImgCode)
-        console.log(newText)
+        let newText = originText.replace(imgCode[0], newImgCode)
 
         // get the Range of the whole text of a document
         let textEditor = vscode.window.activeTextEditor
