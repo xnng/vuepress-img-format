@@ -24,6 +24,17 @@
                 "command": "extension.resetFormat",
                 "title": "img reset format"
             }
+        ],
+        "keybindings": [{
+                "command": "extension.format",
+                "key": "ctrl+shift+8",
+                "mac": "cmd+shift+8"
+            },
+            {
+                "command": "extension.resetFormat",
+                "key": "ctrl+shift+9",
+                "mac": "cmd+shift+9"
+            }
         ]
     },
     "scripts": {
