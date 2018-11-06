@@ -1,5 +1,7 @@
 # vuepress-img-format 
 
+[中文说明](https://juejin.im/post/5be13b60f265da616c65122a)
+
 <img alt="icons" src="https://raw.githubusercontent.com/xnng/vuepress-img-format/master/icon.png">
 
 This is a plug-in that allows vuepress to support image magnification.
