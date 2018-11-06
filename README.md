@@ -1,6 +1,6 @@
 # vuepress-img-format 
 
-![](./icon.png)
+<img alt="icons" src="https://raw.githubusercontent.com/xnng/vuepress-img-format/master/icon.png">
 
 This is a plug-in that allows vuepress to support image magnification.
 
@@ -33,10 +33,14 @@ Or you can use shortcut keys:
 | Windows/Linux | Ctrl + Shift +8 | Ctrl + Shift + 8 |
 | Mac | Cmd + Shift + 8 | Cmd + Shift + 9 |
 
-![vuepress-img-format](https://user-images.githubusercontent.com/38936252/48043620-8bca5c00-e1c2-11e8-8389-b450a82b8c35.gif)
+<img alt="vuepress-img-format" src="https://user-images.githubusercontent.com/38936252/48043620-8bca5c00-e1c2-11e8-8389-b450a82b8c35.gif" width="750">
 
 Finally, you can see the effect.
 
-![effect](https://user-images.githubusercontent.com/38936252/48043918-119ad700-e1c4-11e8-9f61-4ebb02f161c6.gif)
+<img alt="effect" src="https://user-images.githubusercontent.com/38936252/48043918-119ad700-e1c4-11e8-9f61-4ebb02f161c6.gif" width="750">
 
 Enjoy it !
+
+## License
+
+[MIT](./LICENSE)
