@@ -2,7 +2,7 @@
     "name": "vuepress-img-format",
     "displayName": "vuepress-img-format",
     "description": "Format the pictures of vuepress to support fancybox.",
-    "version": "0.0.2",
+    "version": "0.9.0",
     "publisher": "xnng",
     "repository": "https://github.com/xnng/vuepress-img-format.git",
     "engines": {

@@ -55,7 +55,6 @@ function activate(context) {
         let imgCode = originText.match(getAllImgCodeRegex)
 
         if (imgCode) {
-
             let newImgCode = imgCode.map((item) => {
                 let newItem = item.substring(item.indexOf('!'), item.indexOf(')') + 1)
                 return newItem
