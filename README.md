@@ -1,5 +1,7 @@
 # vuepress-img-format 
 
+![](./icon.png)
+
 This is a plug-in that allows vuepress to support image magnification.
 
 And it needs to cooperate with fancybox.
@@ -37,4 +39,4 @@ Finally, you can see the effect.
 
 ![effect](https://user-images.githubusercontent.com/38936252/48043918-119ad700-e1c4-11e8-9f61-4ebb02f161c6.gif)
 
-Enjou it !
+Enjoy it !
