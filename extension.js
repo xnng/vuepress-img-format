@@ -1,5 +1,24 @@
 const vscode = require('vscode');
 
+function reaplaceTextByVscodeAPI(newText) {
+    // get the Range of the whole text of a document
+    let textEditor = vscode.window.activeTextEditor
+    let firstLine = textEditor.document.lineAt(0);
+    let lastLine = textEditor.document.lineAt(textEditor.document.lineCount - 1);
+    let textRange = new vscode.Range(0,
+        firstLine.range.start.character,
+        textEditor.document.lineCount - 1,
+        lastLine.range.end.character);
+
+    // Replace documents with vscode API
+    let uri = vscode.window.activeTextEditor.document.uri
+    let textEdits = [];
+    textEdits.push(new vscode.TextEdit(textRange, newText))
+    let workspaceEdit = new vscode.WorkspaceEdit()
+    workspaceEdit.set(uri, textEdits)
+    vscode.workspace.applyEdit(workspaceEdit)
+}
+
 function activate(context) {
     let format = vscode.commands.registerCommand('extension.format', function() {
         let originText = vscode.window.activeTextEditor.document.getText()
@@ -25,22 +44,7 @@ function activate(context) {
                 dynamicText = newText
             }
 
-            // get the Range of the whole text of a document
-            let textEditor = vscode.window.activeTextEditor
-            let firstLine = textEditor.document.lineAt(0);
-            let lastLine = textEditor.document.lineAt(textEditor.document.lineCount - 1);
-            let textRange = new vscode.Range(0,
-                firstLine.range.start.character,
-                textEditor.document.lineCount - 1,
-                lastLine.range.end.character);
-
-            // Replace documents with vscode API
-            let uri = vscode.window.activeTextEditor.document.uri
-            let textEdits = [];
-            textEdits.push(new vscode.TextEdit(textRange, newText))
-            let workspaceEdit = new vscode.WorkspaceEdit()
-            workspaceEdit.set(uri, textEdits)
-            vscode.workspace.applyEdit(workspaceEdit)
+            reaplaceTextByVscodeAPI(newText)
             vscode.window.showInformationMessage('Formatting success.');
         } else {
             vscode.window.showInformationMessage('Formatting has been completed.');
@@ -69,22 +73,7 @@ function activate(context) {
                 dynamicText = newText
             }
 
-            // get the Range of the whole text of a document
-            let textEditor = vscode.window.activeTextEditor
-            let firstLine = textEditor.document.lineAt(0);
-            let lastLine = textEditor.document.lineAt(textEditor.document.lineCount - 1);
-            let textRange = new vscode.Range(0,
-                firstLine.range.start.character,
-                textEditor.document.lineCount - 1,
-                lastLine.range.end.character);
-
-            // Replace documents with vscode API
-            let uri = vscode.window.activeTextEditor.document.uri
-            let textEdits = [];
-            textEdits.push(new vscode.TextEdit(textRange, newText))
-            let workspaceEdit = new vscode.WorkspaceEdit()
-            workspaceEdit.set(uri, textEdits)
-            vscode.workspace.applyEdit(workspaceEdit)
+            reaplaceTextByVscodeAPI(newText)
             vscode.window.showInformationMessage('Reset formatting success');
         } else {
             vscode.window.showInformationMessage('Reset formatting completed');
