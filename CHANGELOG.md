@@ -1,10 +1,10 @@
 # Change Log
 
-- 1.0.2
+- 1.1.2
 
 Optimization code
 
-- 1.0.1
+- 1.0.2
 
 add chinese document
 
