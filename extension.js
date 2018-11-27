@@ -78,7 +78,6 @@ function activate(context) {
         } else {
             vscode.window.showInformationMessage('Reset formatting completed');
         }
-
     });
 
     context.subscriptions.push(format, resetFormat);

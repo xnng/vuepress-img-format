@@ -1,5 +1,9 @@
 # Change Log
 
+- 1.1.4
+
+fixed event-stream error
+
 - 1.1.3
 
 Optimization code
