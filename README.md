@@ -1,6 +1,6 @@
 # vuepress-img-format 
 
-[中文说明](https://juejin.im/post/5be39d286fb9a049b77fd892)
+[简体中文](https://juejin.im/post/5be39d286fb9a049b77fd892)
 
 <img alt="icons" src="https://raw.githubusercontent.com/xnng/vuepress-img-format/master/icon.png">
 
